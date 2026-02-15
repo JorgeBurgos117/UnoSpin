@@ -1,0 +1,65 @@
+package styles;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class RoundTextfield extends JTextField {
+
+    String txtPlaceholder;
+    boolean fondo = true;
+    Style style = new Style();
+
+    /*
+    public RoundTextfield(String txtPlaceholder, boolean fondo, int width, int height, int fontSize) {
+        this.txtPlaceholder = txtPlaceholder;
+        this.fondo = fondo;
+        this.width = width;
+        this.height = height;
+        //setFont(FuenteUtil.cargarFuenteInter(fontSize, "Inter_Regular"));
+        setPreferredSize(new Dimension(width, height));
+        //setBorder(new RoundBorder(Style.CORNER_RADIUS_TXT));
+        setOpaque(false);
+
+    }*/
+
+    public RoundTextfield(String txtPlaceholder) {
+        this.txtPlaceholder = txtPlaceholder;
+        setPreferredSize(style.dimensionTextfield);
+        //setBorder(new RoundBorder(Style.CORNER_RADIUS_TXT));
+        setOpaque(false);
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        //if (getText().isEmpty()) {
+        Graphics2D g2d = (Graphics2D) g.create();
+        if (getText().isEmpty()) {
+            g2d.setColor(Color.white);
+            if (fondo) {
+                g2d.fillRoundRect(0, 0, getWidth(), getHeight(), Style.cornerRadius, Style.cornerRadius);
+                g2d.setColor(Style.colorTextoTextfield);
+
+            }
+            g2d.drawString(txtPlaceholder, 15, getHeight() / 2 + 6);
+        } else {
+            if (fondo) {
+                //Graphics2D g2d = (Graphics2D) g.create();
+                g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                g2d.setColor(Color.white);
+                if (fondo) {
+                    g2d.fillRoundRect(0, 0, getWidth(), getHeight(), Style.cornerRadius, Style.cornerRadius);
+                    g2d.setColor(Style.colorTextoTextfield);
+                }
+                g2d.dispose();
+            }
+            super.paintComponent(g);
+        }
+    }
+
+    /*
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(width, height);
+    }*/
+
+}
