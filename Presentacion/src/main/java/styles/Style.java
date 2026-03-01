@@ -33,14 +33,22 @@ public class Style {
     public static final int textFieldX = 200;
     public static final int textFieldY = 100;
     public static final Dimension dimensionTextfield = new Dimension(textFieldX, textFieldY);
+        //Mano
+    public static final int manoX = (frameX/4)*3;
+    public static final int manoY = frameY/4;
+    public static final Dimension dimensionMano = new Dimension(manoX, manoY);
         //Cartas
             //Carta base
-    public static final int cartaX = 200;
+    /*
+    public static final int cartaX = frameY/4;
     public static final int cartaY = (int)(cartaX*1.6);
+     */
+    public static final int cartaY = manoY-20;
+    public static final int cartaX = (int)(cartaY/1.6);
     public static final Dimension dimensionCarta = new Dimension(cartaX, cartaY);
             //Subcarta (para pintar bordes
-    public static final int cornerRadiusCarta = 40;
-    public static final int bordeCarta = 20;
+    public static final int cornerRadiusCarta = (int)(cartaX/3.5);
+    public static final int bordeCarta = (int)(cartaX/10);
     public static final int subCartaX = cartaX-bordeCarta;
     public static final int subCartaY = cartaY - bordeCarta;
     public static final Dimension dimensionSubCarta= new Dimension(subCartaX, subCartaY);

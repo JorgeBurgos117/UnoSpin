@@ -1,8 +1,8 @@
 package menuPrincipal;
 
+import partida.PnlMano;
 import styles.RoundButton;
 import styles.Style;
-import styles.cartas.cartaNormal;
 
 import javax.swing.*;
 import java.awt.*;
@@ -46,7 +46,7 @@ public class PnlPantallaPrincipal extends JPanel {
         });
 
         //Testeo
-        //testeo();
+        testeo();
     }
 
     void crearPartida() {
@@ -63,13 +63,7 @@ public class PnlPantallaPrincipal extends JPanel {
     //Espacio para hacer testeo visual
     public void testeo() {
 
-        add(new cartaNormal(Color.BLUE, 8, false));
-        add(new cartaNormal(Color.RED, 2, false));
-        add(new cartaNormal(Color.GREEN, 4, false));
-
-        repaint();
-        revalidate();
-        System.out.println("testeo");
+        add(new PnlMano());
     }
 
 
