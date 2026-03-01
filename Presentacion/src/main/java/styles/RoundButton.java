@@ -89,4 +89,8 @@ public class RoundButton extends JButton {
 
     }
 
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
 }

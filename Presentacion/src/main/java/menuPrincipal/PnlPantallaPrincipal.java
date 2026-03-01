@@ -2,6 +2,7 @@ package menuPrincipal;
 
 import styles.RoundButton;
 import styles.Style;
+import styles.cartas.cartaNormal;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,6 +25,7 @@ public class PnlPantallaPrincipal extends JPanel {
         setSize(style.dimensionFrame);
         setBackground(style.colorBase);
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setOpaque(false);
 
         //Contenido
         add(btnCrearPartida);
@@ -43,6 +45,8 @@ public class PnlPantallaPrincipal extends JPanel {
             }
         });
 
+        //Testeo
+        //testeo();
     }
 
     void crearPartida() {
@@ -53,6 +57,19 @@ public class PnlPantallaPrincipal extends JPanel {
     void unirsePartida() {
         System.out.println("Unirse a partida");
         frame.unirsePartida();
+    }
+
+
+    //Espacio para hacer testeo visual
+    public void testeo() {
+
+        add(new cartaNormal(Color.BLUE, 8, false));
+        add(new cartaNormal(Color.RED, 2, false));
+        add(new cartaNormal(Color.GREEN, 4, false));
+
+        repaint();
+        revalidate();
+        System.out.println("testeo");
     }
 
 

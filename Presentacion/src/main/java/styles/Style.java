@@ -12,12 +12,16 @@ public class Style {
         -contenedor "ejemplo" = contEjemplo
     */
 
+    //Número de colores de cartas
+    public static final int cantidadColores = 4;
+
     //Constantes de estilo
+        //Qué tan redonditos están los bordes
     public static final int cornerRadius = 25;
     public static final int letraSize = 24;
 
     //Dimensiones
-        //Canvas
+        //Lienzo
     public static final int frameX = 1080;
     public static final int frameY = 720;
     public static final Dimension dimensionFrame = new Dimension(frameX, frameY);
@@ -29,11 +33,22 @@ public class Style {
     public static final int textFieldX = 200;
     public static final int textFieldY = 100;
     public static final Dimension dimensionTextfield = new Dimension(textFieldX, textFieldY);
+        //Cartas
+            //Carta base
+    public static final int cartaX = 200;
+    public static final int cartaY = (int)(cartaX*1.6);
+    public static final Dimension dimensionCarta = new Dimension(cartaX, cartaY);
+            //Subcarta (para pintar bordes
+    public static final int cornerRadiusCarta = 40;
+    public static final int bordeCarta = 20;
+    public static final int subCartaX = cartaX-bordeCarta;
+    public static final int subCartaY = cartaY - bordeCarta;
+    public static final Dimension dimensionSubCarta= new Dimension(subCartaX, subCartaY);
 
 
     //Colores
         //Principal
-    public static final Color colorBase = new Color(255, 255, 255);
+    public static final Color colorBase = new Color(122, 0, 0);
     public static final Color colorPrincipal = new Color(207, 0, 0);
     public static final Color colorPrincipalHover = new Color(255, 0, 0);
     public static final Color colorSecundario = new Color(255, 196, 0);
