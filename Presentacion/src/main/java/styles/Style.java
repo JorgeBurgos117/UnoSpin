@@ -57,6 +57,7 @@ public class Style {
     //Colores
         //Principal
     public static final Color colorBase = new Color(122, 0, 0);
+    public static final Color colorPartida = new Color(0, 11, 76);
     public static final Color colorPrincipal = new Color(207, 0, 0);
     public static final Color colorPrincipalHover = new Color(255, 0, 0);
     public static final Color colorSecundario = new Color(255, 196, 0);

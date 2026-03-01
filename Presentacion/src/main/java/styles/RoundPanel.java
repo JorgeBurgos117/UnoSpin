@@ -11,8 +11,16 @@ public class RoundPanel extends JPanel {
     int cornerRadius;
     Color color;
 
+    //Solo usar para generar la carta
     public RoundPanel(Color color) {
         this.cornerRadius = style.cornerRadiusCarta;
+        this.color = color;
+        setOpaque(false);
+    }
+
+    //Uso general
+    public RoundPanel(Color color, int cornerRadius) {
+        this.cornerRadius = cornerRadius;
         this.color = color;
         setOpaque(false);
     }

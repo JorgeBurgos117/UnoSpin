@@ -46,7 +46,7 @@ public class PnlPantallaPrincipal extends JPanel {
         });
 
         //Testeo
-        testeo();
+        //testeo();
     }
 
     void crearPartida() {

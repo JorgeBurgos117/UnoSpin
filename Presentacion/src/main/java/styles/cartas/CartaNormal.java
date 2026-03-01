@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class cartaNormal extends JPanel {
+public class CartaNormal extends JPanel {
 
     Style style = new Style();
 
@@ -27,7 +27,7 @@ public class cartaNormal extends JPanel {
     CustomLabel lblNumerito2;
     JPanel acomodo = new JPanel();
 
-    public cartaNormal(Color color, int numero, boolean esSpin) {
+    public CartaNormal(Color color, int numero, boolean esSpin) {
 
         this.color = color;
         this.numero = numero;

@@ -1,5 +1,6 @@
 package menuPrincipal;
 
+import partida.PnlPartida;
 import styles.Style;
 
 import javax.swing.*;
@@ -17,9 +18,8 @@ public class FrmPrincipal extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        //PnlPantallaPrincipal pnlPantallaPrincipal = new PnlPantallaPrincipal();
-        //add(pnlPantallaPrincipal);
-        pantallaPrincipal();
+        //pantallaPrincipal();
+        verPartida();
 
         repaint();
         setVisible(true);
@@ -63,6 +63,13 @@ public class FrmPrincipal extends JFrame {
 
     public void verLobby() {
         limpiarContenido();
+    }
+
+    public void verPartida() {
+        limpiarContenido();
+        contenido = new PnlPartida(this);
+        add(contenido);
+        revalidate();
     }
 
 }
